@@ -1,4 +1,4 @@
-code:add_path(os:getenv("HOME") ++ "/Work/erl_commons/deps/recon/ebin").
-code:add_path(os:getenv("HOME") ++ "/Work/erl_commons/deps/cake/ebin").
-code:add_path(os:getenv("HOME") ++ "/Work/erl_commons/ebin").
-code:load_abs(os:getenv("HOME") ++ "/Work/erl_commons/ebin/user_default").
+code:add_path(os:getenv("HOME") ++ "/Work/shell_commons/deps/recon/ebin").
+code:add_path(os:getenv("HOME") ++ "/Work/shell_commons/deps/cake/ebin").
+code:add_path(os:getenv("HOME") ++ "/Work/shell_commons/ebin").
+code:load_abs(os:getenv("HOME") ++ "/Work/shell_commons/ebin/user_default").
