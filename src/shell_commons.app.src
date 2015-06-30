@@ -1,0 +1,8 @@
+{application, shell_commons, [
+    {description, "commons, useful from the shell"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {applications, [
+        stdlib,
+        kernel]}
+]}.
