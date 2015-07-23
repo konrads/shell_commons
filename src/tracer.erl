@@ -74,7 +74,8 @@ clear() ->
 %% gen_server callbacks
 init([]) -> {ok, #tracer_state{}}.
 
-handle_call({add, {_M, _F, _A}=Call}, _From, #tracer_state{calls=Calls, num_matches=NumMatches}=State) ->
+handle_call({add, {M, _F, _A}=Call}, _From, #tracer_state{calls=Calls, num_matches=NumMatches}=State) ->
+    catch M:module_info(),  % attempt to load if not loaded yet
     Calls2 = lists:usort([ Call | Calls ]),
     NumMatches2 = recon_call(Calls2),
     case NumMatches2 of
